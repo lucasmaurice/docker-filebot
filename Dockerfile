@@ -100,13 +100,11 @@ RUN \
 # Add files.
 COPY rootfs/ /
 
+RUN /usr/bin/crontab /etc/crontabs/filebot-routine
+CMD /usr/sbin/crond -f -l 8
+
 # Set environment variables.
 ENV APP_NAME="FileBot"
-
-# Define mountable directories.
-VOLUME ["/config"]
-VOLUME ["/storage/origin"]
-VOLUME ["/storage/"]
 
 # Metadata.
 LABEL \

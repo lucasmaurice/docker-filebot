@@ -4,4 +4,4 @@
 }
 
 // A EXECUTER: 
-// /opt/filebot/filebot -script ./get_all_tvshows.groovy -r ; /opt/filebot/filebot -script fn:cleaner /storage/origin/ -r
+// /opt/filebot/filebot -script /config/get_all_tvshows.groovy -r ; /opt/filebot/filebot -script fn:cleaner /storage/origin/ -r
