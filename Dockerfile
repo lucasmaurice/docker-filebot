@@ -101,9 +101,10 @@ RUN \
 COPY rootfs/ /
 
 RUN /usr/bin/crontab /etc/crontabs/filebot-routine
+RUN chmod +x /config/filebot.sh
+
 CMD /usr/sbin/crond -f -l 8
 
-CMD chmod +x /config/filebot.sh
 
 # Set environment variables.
 ENV APP_NAME="FileBot"
