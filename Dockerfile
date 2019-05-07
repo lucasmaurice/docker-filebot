@@ -76,11 +76,11 @@ RUN \
     # Cleanup.
     del-pkg build-dependencies && \
     rm /usr/lib/pkgconfig/libchromaprint.pc \
-       /usr/include/chromaprint.h \
-       && \
+        /usr/include/chromaprint.h \
+        && \
     rmdir /usr/include \
-          /usr/lib/pkgconfig \
-          && \
+        /usr/lib/pkgconfig \
+        && \
     rm -rf /tmp/* /tmp/.[!.]*
 
 # Adjust the openbox config.
@@ -103,13 +103,15 @@ COPY rootfs/ /
 RUN /usr/bin/crontab /etc/crontabs/filebot-routine
 CMD /usr/sbin/crond -f -l 8
 
+CMD chmod +x /config/filebot.sh
+
 # Set environment variables.
 ENV APP_NAME="FileBot"
 
 # Metadata.
 LABEL \
-      org.label-schema.name="filebot" \
-      org.label-schema.description="Docker container for FileBot" \
-      org.label-schema.version="unknown" \
-      org.label-schema.vcs-url="https://github.com/jlesage/docker-filebot" \
-      org.label-schema.schema-version="1.0"
+        org.label-schema.name="filebot" \
+        org.label-schema.description="Docker container for FileBot" \
+        org.label-schema.version="unknown" \
+        org.label-schema.vcs-url="https://github.com/jlesage/docker-filebot" \
+        org.label-schema.schema-version="1.0"
