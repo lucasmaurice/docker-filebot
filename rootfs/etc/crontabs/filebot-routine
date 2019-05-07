@@ -1,2 +1,1 @@
-  *      *       *       *       *       /opt/filebot/filebot -script /config/get_all_tvshows.groovy -r ; /opt/filebot/filebot -script fn:cleaner /storage/origin/Radarr-Movies -r ; /opt/filebot/filebot -script fn:cleaner /storage/origin/Sonarr-TvShows -r ; chown -R 1000:1000 /storage/destination ; chmod -R 775 /storage/destination
-  
+  *      *       *       *       *       /config/filebot.sh
